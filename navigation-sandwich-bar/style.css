@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Verdana', 'Geneva', 'Tahoma', sans-serif;
+	font-weight: 300;
+	font-size: large;
+	outline: none;
+}
+
+body {
+	background-color: #fff;
+}
+
+header {
+	display: flex;
+	background-color: #000;
+	position: fixed;
+	width: 100%;
+	height: 64px;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: x-large;
+}
+
+.bars {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0);
+	position: fixed;
+	width: 64px;
+	height: 64px;
+	cursor: pointer;
+	pointer-events: auto;
+	touch-action: manipulation;
+}
+
+.bar-icon {
+	display: block;
+	width: 40px;
+	height: 4px;
+	background-color: #fff;
+}
+.bar-icon + .bar-icon {
+	margin-top: 8px;
+}
+#nav-container .bar-icon:nth-of-type(1) { transition: 0.4s; }
+#nav-container .bar-icon:nth-of-type(2) { transition: 0.4s; }
+#nav-container .bar-icon:nth-of-type(3) { transition: 0.6s; }
+#nav-container:focus-within .bar-icon:nth-of-type(1) { transform: translateY( 12px) rotate( -225deg); background-color: red;  }
+#nav-container:focus-within .bar-icon:nth-of-type(2) { transform: translateX( 48px); opacity: 0;     background-color: blue; }
+#nav-container:focus-within .bar-icon:nth-of-type(3) { transform: translateY(-12px) rotate( 225deg); background-color: red;  }
+
+
+
+#nav-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+}
+#nav-container .menu-buttons {
+	/* display: flex;
+	flex-direction: column;
+	align-items: flex-start; */
+	position: fixed;
+	left: 0;
+	margin-top: 64px;
+	padding: 16px;
+	height: calc(100% - 64px);
+	min-width: 300px;
+	transform: translateX(-100%);
+	transition: transform .4s;
+	background-color: #000;
+	pointer-events: auto;
+}
+#nav-container .menu-buttons a {
+	font-size: 24pt;
+	text-decoration: none;
+	color: white;
+	/* transition: color .15s; */
+}
+
+#nav-container .menu-buttons a:hover {
+	color: #f0f;
+}
+#nav-container .menu-buttons p.menu-info {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 32px;
+	width: auto;
+	text-align: center;
+	color: #3f3f3f;
+	font-size: medium;
+	margin-bottom: 8px;
+}
+#nav-container .menu-buttons a.menu-info {
+	font-size: medium;
+	color: #6f6f6f;
+}
+#nav-container .menu-buttons a.menu-info:hover {
+	color: #f0f;
+}
+#nav-container:focus-within .bars{
+	pointer-events: none;
+}
+#nav-container:focus-within .menu-buttons {
+	left: 0;
+	transform: none;
+}
+#nav-container .black-screen {
+	position: absolute;
+	background-color: #000;
+	opacity: 0%;
+	top: 64px;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	transition: opacity .4s;
+}
+#nav-container:focus-within .black-screen {
+	opacity: 75%;
+	pointer-events: painted;
+}
+
+main div {
+	padding-top   : 64px;
+	padding-bottom: 64px;
+	/* background-color: red; */
+	z-index: -1;
+	text-align: center;
+}
+main p, main strong {
+	font-size: 14pt;
+	color: #000;
+}
+main strong {
+	font-weight: bold;
+}
+main h1 {
+	font-size: 20pt;
+	font-weight: bold;
+	color: #fff;
+	background-color: #000;
+}
+main h2 {
+	font-size: 18pt;
+	font-weight: bold;
+	color: #000;
+	/* text-decoration: underline; */
+}
+
+div#center-text {
+	width: 60%;
+	padding-bottom: 0;
+	position: absolute;
+	top : 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
