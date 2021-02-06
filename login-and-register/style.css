@@ -26,6 +26,8 @@ div#register-login {
     height: 60%;
     max-width: 300px;
     max-height: 300px;
+    min-width: 280px;
+    min-height: 280px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -137,3 +139,4 @@ legend {
     position: absolute;
     visibility: hidden;
 }
+
