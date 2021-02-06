@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="register-login">
+        <div id="to-login">
+            <div class="lines-login">
+                <div class="line-top">LOGIN</div>
+                <div class="line-bot"></div>
+            </div>
+
+            <form method="POST" id="id-login" action="index.html">
+                <fieldset id="login">
+                    <legend align="center">LOGIN</legend>
+                    <p><label for="id-loginEmail">E-MAIL</label><br><input type="email" name="name-loginEmail" id="id-loginEmail"></p>
+                    <p><label for="id-loginPass">PASSWORD</label><br><input type="password" name="name-loginPass" id="id-loginPass"></p>
+                </fieldset>
+                <input type="submit" value="LOGIN"/>
+            </form>
+        </div>
+
+
+        <div id="to-register">
+            <div class="lines-register">
+                <div class="line-top">REGISTER</div>
+                <div class="line-bot"></div>
+            </div>
+
+            <form method="POST" id="id-register" action="index.html">
+                <fieldset id="register">
+                    <legend align="center">REGISTER</legend>
+                    <p><label for="id-registerEmail">E-MAIL</label><br><input  type="email"    name="name-registerEmail" id="id-registerEmail"></p>
+                    <p><label for="id-registerPass">PASSWORD</label><br><input type="password" name="name-registerPass"  id="id-registerPass"></p>
+                </fieldset>
+                <input type="submit" value="REGISTER"/>
+            </form>
+        </div>
+
+        <div id="change-log">
+            <input type="button" value="REGISTER?" onclick="registerOrLogin(1)">
+            <input type="button" value="LOGIN?"    onclick="registerOrLogin(2)">
+        </div>
+    </div>
+
+
+    <!-- SCRIPTS -->
+    <script src="functions.js"></script>
+</body>
+</html>
