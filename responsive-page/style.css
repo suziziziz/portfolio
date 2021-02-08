@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+/* === COLOR PALLET === *//*
+	blue: #003049;
+	red: #d62828;
+	orange: #f77f00;
+	light-yellow: #fcbf49;
+	white: #eae2b7;
+*/
+
 * {
 	margin: 0;
 	padding: 0;
@@ -14,7 +22,7 @@ body {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-color: #f4f1de;
+	background-color: #eae2b7;
 }
 
 #bar-buttons {
@@ -22,7 +30,7 @@ body {
 	position: fixed;
 	width: 100%;
 	height: var(--nav-bar-height);
-	background-color: #3d405b;
+	background-color: #003049;
 }
 #bar-buttons header {
 	position: absolute;
@@ -33,7 +41,7 @@ body {
 	display: flex;
 	flex-direction: collumn;
 	align-items: center;
-	color: #e07a5f;
+	color: #d62828;
 	/* font-size: 16pt; */
 }
 #bar-buttons ul {
@@ -58,13 +66,13 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	color: #e07a5f;
+	color: #d62828;
 	text-decoration: none;
 	transition: all .15s;
 }
 #bar-buttons ul a:hover {
-	color: #3d405b;
-	background-color: #e07a5f;
+	color: #003049;
+	background-color: #d62828;
 }
 
 
@@ -78,12 +86,12 @@ div#main {
 	align-items: center;
 }
 div#main h1 {
-	color: #e07a5f;
+	color: #d62828;
 	padding: 16px;
 	font-size: 20pt;
 }
 div#main p {
-	color: #3d405b;
+	color: #003049;
 	padding: 4px 16px 4px 16px;
 	font-size: 12pt;
 }
@@ -109,13 +117,13 @@ div#main p {
 	#bar-resp .bar {
 		width: 40px;
 		height: 4px;
-		background-color: #e07a5f;
+		background-color: #d62828;
 		transition: all .2s;
 	}
 	.bar + .bar {
 		margin-top: 8px;
 	}
-	#bar-buttons:focus-within .bar { background-color: #81b29a; }
+	#bar-buttons:focus-within .bar { background-color: #f77f00; }
 	#bar-buttons:focus-within .bar:nth-child(1) { transform: translateY( 12px) rotate(calc( 45deg * 3)); }
 	#bar-buttons:focus-within .bar:nth-child(2) { transform: translateX(-64px); opacity: 0; }
 	#bar-buttons:focus-within .bar:nth-child(3) { transform: translateY(-12px) rotate(calc(-45deg * 3)); }
@@ -127,7 +135,7 @@ div#main p {
 		left: 0;
 		transform: translateX(100%);
 		display: block;
-		background-color: #3d405b;
+		background-color: #003049;
 		pointer-events: painted;
 		transition: transform .3s;
 	}
