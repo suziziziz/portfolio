@@ -5,9 +5,9 @@
 	padding: 0;
 	font-family: sans-serif;
 	font-weight: bold;
+	outline: none;
 
 	--nav-bar-height: 48px;
-	outline: none;
 }
 
 body {
@@ -88,6 +88,10 @@ div#main p {
 }
 
 @media (orientation: portrait) {
+	* {
+		--nav-bar-height: 192px;
+		font-size: 26pt;
+	}
 	#bar-resp {
 		position: absolute;
 		width: var(--nav-bar-height);
@@ -102,16 +106,18 @@ div#main p {
 	}
 	#bar-buttons:focus-within #bar-resp { pointer-events: none; }
 	#bar-resp .bar {
-		width: 24px;
-		height: 4px;
-		margin-top: 4px;
+		width: 96px;
+		height: 8px;
 		background-color: #81b29a;
 		transition: all .2s;
 	}
+	.bar + .bar {
+		margin-top: 24px;
+	}
 	#bar-buttons:focus-within .bar { background-color: #e07a5f; }
-	#bar-buttons:focus-within .bar:nth-child(1) { transform: translateY(  8px) rotate( 135deg); }
-	#bar-buttons:focus-within .bar:nth-child(2) { transform: translateX(-24px); opacity: 0; }
-	#bar-buttons:focus-within .bar:nth-child(3) { transform: translateY( -8px) rotate(-135deg); }
+	#bar-buttons:focus-within .bar:nth-child(1) { transform: translateY( 32px) rotate(calc( 45deg * 3)); }
+	#bar-buttons:focus-within .bar:nth-child(2) { transform: translateX(-64px); opacity: 0; }
+	#bar-buttons:focus-within .bar:nth-child(3) { transform: translateY(-32px) rotate(calc(-45deg * 3)); }
 	
 	#bar-buttons ul {
 		width: 100vw;
@@ -125,7 +131,7 @@ div#main p {
 		transition: transform .3s;
 	}
 	#bar-buttons ul li {
-		height: 64px;
+		height: 196px;
 		width: 100%;
 	}
 	#bar-buttons ul a {
@@ -133,5 +139,12 @@ div#main p {
 	}
 	#bar-buttons:focus-within ul {
 		transform: none;
+	}
+
+	div#main h1 {
+		font-size: 32pt;
+	}
+	div#main p {
+		font-size: 26pt;
 	}
 }
