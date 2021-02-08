@@ -87,11 +87,8 @@ div#main p {
 	font-size: 12pt;
 }
 
+
 @media (orientation: portrait) {
-	* {
-		--nav-bar-height: 192px;
-		font-size: 26pt;
-	}
 	#bar-resp {
 		position: absolute;
 		width: var(--nav-bar-height);
@@ -106,18 +103,18 @@ div#main p {
 	}
 	#bar-buttons:focus-within #bar-resp { pointer-events: none; }
 	#bar-resp .bar {
-		width: 96px;
-		height: 8px;
+		width: 24px;
+		height: 4px;
 		background-color: #81b29a;
 		transition: all .2s;
 	}
 	.bar + .bar {
-		margin-top: 24px;
+		margin-top: 4px;
 	}
 	#bar-buttons:focus-within .bar { background-color: #e07a5f; }
-	#bar-buttons:focus-within .bar:nth-child(1) { transform: translateY( 32px) rotate(calc( 45deg * 3)); }
+	#bar-buttons:focus-within .bar:nth-child(1) { transform: translateY( 8px) rotate(calc( 45deg * 3)); }
 	#bar-buttons:focus-within .bar:nth-child(2) { transform: translateX(-64px); opacity: 0; }
-	#bar-buttons:focus-within .bar:nth-child(3) { transform: translateY(-32px) rotate(calc(-45deg * 3)); }
+	#bar-buttons:focus-within .bar:nth-child(3) { transform: translateY(-8px) rotate(calc(-45deg * 3)); }
 	
 	#bar-buttons ul {
 		width: 100vw;
@@ -131,7 +128,7 @@ div#main p {
 		transition: transform .3s;
 	}
 	#bar-buttons ul li {
-		height: 196px;
+		height: 64px;
 		width: 100%;
 	}
 	#bar-buttons ul a {
@@ -139,12 +136,5 @@ div#main p {
 	}
 	#bar-buttons:focus-within ul {
 		transform: none;
-	}
-
-	div#main h1 {
-		font-size: 32pt;
-	}
-	div#main p {
-		font-size: 26pt;
 	}
 }
