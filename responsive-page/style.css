@@ -23,17 +23,17 @@ body {
 }
 
 #bar-buttons {
-	z-index: 1;
 	position: fixed;
 	width: 100%;
 	height: var(--nav-bar-height);
 	background-color: #000;
 }
-#bar-buttons header {
-	position: absolute;
+header#main-page {
+	z-index: 1;
+	position: fixed;
 	top: 0;
 	left: 0;
-	height: 100%;
+	height: var(--nav-bar-height);
 	width: var(--nav-bar-height);
 	display: flex;
 	flex-direction: collumn;
@@ -41,7 +41,7 @@ body {
 	color: #f00;
 	/* font-size: 16pt; */
 }
-#bar-buttons header img {
+header#main-page img {
 	width: calc(var(--nav-bar-height) / 1.5);
 	height: calc(var(--nav-bar-height) / 1.5);
 }
@@ -121,7 +121,7 @@ div#main p {
 		--nav-bar-height: 80px;
 	}
 	
-	#bar-buttons header {
+	header#main-page {
 		left: 50%;
 		transform: translateX(-50%);
 	}

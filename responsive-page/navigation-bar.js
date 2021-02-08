@@ -1,7 +1,7 @@
 document.write(
 `<div id="nav-bar">
+    <header id="main-page"><a href="index.html" id="main-page-redirect"><img src="../favicon.png" alt="Botão Para o Inicio"></img></a></header>
     <div id="bar-buttons">
-        <header><a href="index.html" id="main-page-redirect"><img src="../favicon.png" alt="Botão Para o Inicio"></img></a></header>
         <div id="bar-resp" tabindex="0">
             <span class="bar"></span>
             <span class="bar"></span>
