@@ -1,13 +1,5 @@
 @charset "UTF-8";
 
-/* === COLOR PALLET === *//*
-	blue: #003049;
-	red: #d62828;
-	orange: #f77f00;
-	light-yellow: #fcbf49;
-	white: #eae2b7;
-*/
-
 * {
 	margin: 0;
 	padding: 0;
@@ -18,11 +10,16 @@
 	--nav-bar-height: 48px;
 }
 
+::selection {
+	background: #f0f;
+	color: #00f;
+}
+
 body {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-color: #eae2b7;
+	background-color: #fff;
 }
 
 #bar-buttons {
@@ -30,19 +27,23 @@ body {
 	position: fixed;
 	width: 100%;
 	height: var(--nav-bar-height);
-	background-color: #003049;
+	background-color: #000;
 }
 #bar-buttons header {
 	position: absolute;
 	top: 0;
 	left: 0;
 	height: 100%;
-	width: 156px;
+	width: var(--nav-bar-height);
 	display: flex;
 	flex-direction: collumn;
 	align-items: center;
-	color: #d62828;
+	color: #f00;
 	/* font-size: 16pt; */
+}
+#bar-buttons header img {
+	width: calc(var(--nav-bar-height) / 1.5);
+	height: calc(var(--nav-bar-height) / 1.5);
 }
 #main-page-redirect {
 	height: 100%;
@@ -52,12 +53,12 @@ body {
 	align-items: center;
 	justify-content: center;
 	text-decoration: none;
-	color: #d62828;
+	color: #f00;
 	transition: all .15s;
 }
 #main-page-redirect:hover {
-	color: #003049;
-	background-color: #d62828;
+	color: #000;
+	background-color: #f00;
 }
 
 #bar-buttons ul {
@@ -82,13 +83,13 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	color: #d62828;
+	color: #f00;
 	text-decoration: none;
 	transition: all .15s;
 }
 #bar-buttons ul a:hover {
-	color: #003049;
-	background-color: #d62828;
+	color: #000;
+	background-color: #f00;
 }
 
 
@@ -102,13 +103,13 @@ div#main {
 	align-items: center;
 }
 div#main h1 {
-	color: #d62828;
+	color: #f00;
 	padding: 16px;
 	font-size: 20pt;
 	text-align: center;
 }
 div#main p {
-	color: #003049;
+	color: #000;
 	padding: 4px 16px 4px 16px;
 	font-size: 12pt;
 	text-align: center;
@@ -141,13 +142,13 @@ div#main p {
 	#bar-resp .bar {
 		width: 40px;
 		height: 4px;
-		background-color: #d62828;
+		background-color: #f00;
 		transition: all .2s;
 	}
 	.bar + .bar {
 		margin-top: 8px;
 	}
-	#bar-buttons:focus-within .bar { background-color: #f77f00; }
+	#bar-buttons:focus-within .bar { background-color: #ff0; }
 	#bar-buttons:focus-within .bar:nth-child(1) { transform: translateY( 12px) rotate(calc( 45deg * 3)); }
 	#bar-buttons:focus-within .bar:nth-child(2) { transform: translateX(-64px); opacity: 0; }
 	#bar-buttons:focus-within .bar:nth-child(3) { transform: translateY(-12px) rotate(calc(-45deg * 3)); }
@@ -159,7 +160,7 @@ div#main p {
 		left: 0;
 		transform: translateX(100%);
 		display: block;
-		background-color: #003049;
+		background-color: #000;
 		pointer-events: painted;
 		transition: transform .3s;
 	}
