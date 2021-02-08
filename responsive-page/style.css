@@ -87,7 +87,7 @@ div#main p {
 	font-size: 12pt;
 }
 
-@media only screen and (max-width: 700px) {
+@media (orientation: portrait) {
 	#bar-resp {
 		position: absolute;
 		width: var(--nav-bar-height);
