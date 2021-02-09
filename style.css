@@ -1,41 +1,114 @@
 * {
-    font-family: 'Arial', sans-serif;
+    font-family: sans-serif;
     margin: 0px;
     padding: 0px;
+    --nav-bar-height: 48px;
 }
+
+
+html {
+    min-height: 100vh;
+}
+
+
+:focus {
+    outline: none;
+}
+
 
 body {
-    padding: 5% 10% 5% 10%;
-}
-div {
-    border: 4px solid black;
-    border-radius: 8px;
-    padding: 16px;
-    box-shadow: 0px 0px 8px black;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
 }
 
-h1 {
-    border-bottom: 1px solid black;
-    border-radius: 8px;
-    padding: 8px 0px 8px 0px;
-    background-color: black;
-    color: white;
-    text-align: center;
-}
-h2 {
-    border-bottom: 1px solid #000;
-    padding-top: 32px;
-}
 
-/* ul {
-    margin-top: 8px;
-} */
-
-a {
+#nav-bar {
+    width: 100%;
+    height: var(--nav-bar-height);
+    background-color: #000;
+    color: #fff;
+}
+#nav-bar ul {
+    float: right;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    list-style: none;
+}
+#nav-bar li {
+    height: 100%;
+}
+#nav-bar li a {
+    height: 100%;
+    width: var(--nav-bar-height);
     text-decoration: none;
-    color: #7f7f7f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-a:hover {
+#nav-bar li a img {
+    height: 75%;
+    width: auto;
+    filter: brightness(0) invert(1);
+    transition: filter .25s;
+}
+#nav-bar li a:hover img {
+    filter: none;
+    transition: filter 0s;
+}
+
+
+header {
+    width: 100%;
+    height: calc( calc(100vh - var(--nav-bar-height)) / 1.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#projects {
+    margin: 0 32px;
+}
+#projects tbody {
+    margin: 0;
+}
+#projects tbody tr {
+    width: 100%;
+    /* background-color: yellow; */
+}
+#projects tbody tr td.image {
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 300px;
+    max-height: 300px;
+}
+#projects tbody tr td.image img {
+    width: 100%;
+    height: 100%;
+    transition: filter .15s;
+}
+#projects tbody tr td.image a:hover img {
+    filter: brightness(0.5);
+}
+#projects tbody tr td.info {
+    padding-left: 16px;
+    vertical-align: top;
+    text-align: left;
+}
+#projects tbody tr td.info a {
+    font-size: 18pt;
+    font-weight: bold;
     text-decoration: underline;
-    color: black;
+    color: #0ff;
+    transition: all .25s;
+}
+#projects tbody tr td.info a:hover {
+    color: #f0f;
+}
+#projects tbody tr td.info h3 {
+    padding: 16px 0;
+    font-weight: normal;
 }
