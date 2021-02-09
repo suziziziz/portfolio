@@ -137,12 +137,9 @@ div#main .photo-album {
 	justify-content: center;
 	align-items: center;
 }
-div#main .photo-album figure {
+div#main .photo-album img {
 	height: auto;
 	width: 60%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 }
 
 
@@ -206,7 +203,8 @@ div#main .photo-album figure {
 	}
 
 
-	div#main .photo-album figure {
+	div#main .photo-album img {
 		width: 100%;
+		height: auto;
 	}
 }
