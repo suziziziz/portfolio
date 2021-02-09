@@ -138,24 +138,11 @@ div#main .photo-album {
 	align-items: center;
 }
 div#main .photo-album figure {
-	height: 128px;
+	height: auto;
 	width: 60%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	overflow: hidden;
-	transition: all .5s;
-	opacity: .25;
-	cursor: pointer;
-}
-div#main .photo-album figure:focus {
-	height: 400px;
-	opacity: 1;
-	cursor: auto;
-	pointer-events: none;
-}
-div#main .photo-album figure:hover {
-	opacity: 1;
 }
 
 
@@ -221,11 +208,5 @@ div#main .photo-album figure:hover {
 
 	div#main .photo-album figure {
 		width: 100%;
-		height: auto;
-		cursor: auto;
-		opacity: 1;
-	}
-	div#main .photo-album figure:focus {
-		height: auto;
 	}
 }
