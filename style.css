@@ -79,7 +79,7 @@ header {
     flex-direction: row;
 }
 #projects li a.image {
-    display: block;
+    display: flex;
 }
 #projects li a.image img {
     width: 256px;
@@ -117,8 +117,13 @@ header {
     #projects li {
         display: initial;
     }
+    #projects li a.image {
+        display: flex;
+        justify-content: center;
+        background-color: #000; 
+    }
     #projects li a.image img {
-        width: 100%;
+        width: 75%;
         height: auto;
     }
     #projects li .info {
@@ -128,7 +133,7 @@ header {
     #projects li .info a {
         display: block;
         text-align: center;
-        padding: 8px 0;
+        padding: 16px 0;
     }
     #projects li .info h3 {
         padding: 12px 0;
@@ -136,7 +141,7 @@ header {
         text-align: center;
     }
     #projects li .info p {
-        font-size: 14p;
+        font-size: 14pt;
         text-align: center;
     }
     #projects li .info {
