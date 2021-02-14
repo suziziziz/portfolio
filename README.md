@@ -1,4 +1,4 @@
 # filyp3r.github.io
-Aqui vai ficar meu portifólio.
+Aqui vai ficar meu portfólio.
 ## LINK
-- portifolio.filyp3r.vercel.app
+- https://portfolio.filyp3r.vercel.app/
