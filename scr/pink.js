@@ -49,7 +49,7 @@ function attrRemove( _element, _qualified_name, _atribute ) {
 
     /* === STEP 2 ===*/
     if ( _temp_new_attr_.indexOf(_atribute) !== -1 ) {
-        var _old_arr = [];
+        let _old_arr = [];
         _temp_new_attr_.forEach(ind_element => {
             if ( ind_element !== _atribute ) {
                 _old_arr.push(ind_element);
