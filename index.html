@@ -63,8 +63,10 @@
         window.addEventListener("scroll", function() {
             if ( scrollY > document.getElementById('header').offsetTop + document.getElementById('header').offsetHeight/2 ) {
                 attrAdd(document.getElementById('top-bar'), "class", "show-top-bar");
+                attrAdd(document.getElementById('header'), "class", "top-bar-to-black");
             } else {
                 attrRemove(document.getElementById('top-bar'), "class", "show-top-bar");
+                attrRemove(document.getElementById('header'), "class", "top-bar-to-black");
             }
         });
     </script>

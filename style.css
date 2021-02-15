@@ -87,6 +87,10 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: background-color .25s;
+}
+.top-bar-to-black {
+    background-color: #000;
 }
 
 
@@ -96,13 +100,14 @@ header {
 #projects h2 {
     padding-left: 16px;
     padding-right: auto;
-    margin: 18px 0;
+    /* margin: 18px 0; */
     font-size: 20pt;
     color: #fff;
     background-color: #000;
 }
 #projects ul {
     width: 100%;
+    padding-bottom: 32px;
 }
 #projects li {
     width: 100%;
