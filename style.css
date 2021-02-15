@@ -82,7 +82,7 @@ body {
 
 header {
     width: 100%;
-    height: calc( calc(100vh - var(--nav-bar-height)) / 1.25);
+    height: calc( calc( 100vh - var(--nav-bar-height) ) / 1.3 );
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,6 +93,14 @@ header {
 #projects {
     width: 100%;
 }
+#projects h2 {
+    padding-left: 16px;
+    padding-right: auto;
+    margin: 18px 0;
+    font-size: 20pt;
+    color: #fff;
+    background-color: #000;
+}
 #projects ul {
     width: 100%;
 }
@@ -102,14 +110,11 @@ header {
     display: flex;
     flex-direction: row;
 }
-#projects li a.image {
-    display: flex;
-}
 #projects li .info {
     padding-left: 16px;
     padding-bottom: 16px;
 }
-#projects li .info a {
+#projects li .info a.link-to {
     text-decoration: underline;
     font-size: 18pt;
     font-weight: bold;
@@ -119,41 +124,76 @@ header {
 #projects li .info a:hover {
     color: #f00;
 }
-#projects li .info h3 {
-    padding: 12px 0;
+#projects li .info h3, #projects li .info h3 a {
+    margin: 12px 0;
+    color: #000;
+}
+#projects li .info h3 a {
+    text-decoration: none;
 }
 #projects li .info p {
-    font-size: 14p;
+    font-size: 12pt;
+    margin-right: 12pt;
+}
+#projects li .info p a {
+    display: inline;
+    text-decoration: none;
+    color: #777;
+}
+#projects li .info h3 a:hover, #projects li .info p a:hover {
+    text-decoration: underline;
 }
 
+
+footer {
+    width: 100%;
+    background-color: #000;
+    height: var(--nav-bar-height);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer a {
+    color: #777;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+    color: #f0f;
+}
 
 
 @media (orientation: portrait) {
     #projects li {
         display: initial;
     }
-    #projects li a.image {
-        display: flex;
-        justify-content: center;
-        background-color: #000; 
+    #projects h2 {
+        padding: 0px;
+        width: 100%;
+        text-align: center;
+        font-size: 20pt;
+        color: #fff;
+        background-color: #000;
     }
     #projects li .info {
         padding: 0;
         width: 100%;
     }
-    #projects li .info a {
+    #projects li .info a.link-to {
         display: block;
         text-align: center;
         padding: 16px 0;
     }
-    #projects li .info h3 {
+    #projects li .info h3, #projects li .info h3 a {
+        margin: 0;
         padding: 12px 0;
-        display: block;
         text-align: center;
     }
     #projects li .info p {
         font-size: 14pt;
         text-align: center;
+        margin: 0 12pt;
     }
     #projects li .info {
         padding-bottom: 32px;
