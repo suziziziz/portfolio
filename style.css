@@ -135,6 +135,7 @@ header {
 }
 #projects li .info h3 a {
     text-decoration: none;
+	color: #444;
 }
 #projects li .info p {
     font-size: 12pt;
