@@ -14,3 +14,16 @@ async function getMyPerfil(  ) {
     xhttp.send();
 }
 getMyPerfil();
+
+
+// === SCROLL === //
+var nav_menu = document.getElementById('navigation-menu')
+window.addEventListener('scroll', function() {
+    if ( scrollY > 128 / 2 ) {
+        attrAdd(nav_menu, 'class', 'navigation-menu-fixed');
+        attrRemove(nav_menu, 'class', 'navigation-menu-absolute');
+    } else {
+        attrRemove(nav_menu, 'class', 'navigation-menu-fixed');
+        attrAdd(nav_menu, 'class', 'navigation-menu-absolute');
+    }
+});

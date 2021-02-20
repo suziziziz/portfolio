@@ -22,70 +22,38 @@
             </div>
         </div>
 
-        <div id="my-projects">
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
-            <h1>TEXTO DE TESTE</h1>
+        <div class="category-title"><h1>MEUS SITES</h1></div>
+        <div class="projects">
+            <div class="item">
+                <a href="sites/minecrackters" target="_blank" class="item-name"><h2>Minecrackters</h2></a>
+                <p>Uma fan-page de minecraft criada em pouco tempo, com pouco conhecimento, apenas para aprimorar meus conhecimentos.<br>
+                Ao menos já tinha uma responsividade e uma barra de navegação sandwich.</p>
+            </div>
+
+            <div class="item">
+                <a href="https://pink.filyp3r.vercel.app" target="_blank" class="item-name"><h2>PinkJS</h2></a>
+                <p>PinkJS é uma biblioteca Javascript feita por brincadeira.<br>
+                É só um recurso "substituto do hmtl" para a criação da estrutura.</p>
+            </div>
+        </div>
+        
+        <div class="category-title"><h1>MEUS JOGOS</h1></div>
+        <div class="projects">
+            <div class="item">
+                <a href="https://gamejolt.com/games/nicks-tower/574322" target="_blank" class="item-name"><h2>Nick's Tower</h2></a>
+                <p>Nick's Tower é um jogo sobre construção, mas não é só isso no jogo todo.<br>
+                Esse jogo foi feito junto com <a href="https://twitter.com/LendarioGuilmon" target="_blank">Abdias Leone</a> e <a href="https://twitter.com/gabrielmg004" target="_blank">Gabriel Mosquetto</a></p>
+            </div>
+            
+            <div class="item">
+                <a href="https://gamejolt.com/games/nicks-tower/574322" target="_blank" class="item-name"><h2>Again</h2></a>
+                <p>Again é um jogo sobre repetições, é isso.<br>
+                Esse jogo foi feito junto com <a href="https://twitter.com/LendarioGuilmon" target="_blank">Abdias Leone</a></p>
+            </div>
         </div>
     </main>
 
     <script src="modules/pinkscript.js"></script>
     <script src="scr.js"></script>
-    <script>
-        var nav_menu = document.getElementById('navigation-menu')
-        window.addEventListener('scroll', function() {
-            if ( scrollY > 128 / 2 ) {
-                attrAdd(nav_menu, 'class', 'navigation-menu-fixed');
-                attrRemove(nav_menu, 'class', 'navigation-menu-absolute');
-            } else {
-                attrRemove(nav_menu, 'class', 'navigation-menu-fixed');
-                attrAdd(nav_menu, 'class', 'navigation-menu-absolute');
-            }
-        });
-    </script>
 </body>
 </html>

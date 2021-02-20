@@ -113,3 +113,50 @@ main {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+main div.category-title {
+    background: linear-gradient(90deg,  #f0f, #f00);
+    padding: 7px 28px;
+    margin: 0 32px;
+    border-radius: 1000px;
+    box-shadow: 0px 0px 8px  #007;
+}
+main div.category-title h1 {
+    display: inline;
+    background: linear-gradient(-90deg,  #707, #007);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.projects {
+    margin: 64px;
+    padding: 24px;
+    background-image: linear-gradient(-90deg, #707, #007);
+    border-radius: 16px;
+
+    box-shadow: 0px 0px 8px  #007;
+}
+.projects .item {
+    margin: 64px 0;
+}
+.projects .item .item-name {
+    text-decoration: none;
+}
+.projects .item .item-name:hover h2 {
+    filter: invert(1);
+}
+.projects .item .item-name h2 {
+    display: inline;
+    background: linear-gradient(90deg,  #ff4500, #ff0);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20pt;
+    transition: filter .25s;
+}
+.projects .item p {
+    display: block;
+    background: linear-gradient(-90deg,  #ff4500, #ff0);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-top: 12px;
+}
