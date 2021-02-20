@@ -2,79 +2,27 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div>
-        <nav id="nav-bar">
-            <ul class="social-links">
-                <li><a href="https://github.com/filyp3r" target="_blank">
-                    <img src="img/github-logo.png" alt="Github"></a></li>
-                <li><a href="https://twitter.com/FilypeR3" target="_blank">
-                    <img src="img/twitter-logo.png" alt="Twitter"></a></li>
-                <li><a href="https://www.linkedin.com/in/filyp3/" target="_blank">
-                    <img src="img/linkedin-logo.png" alt="Linkedin"></a></li>
-                <li><a href="https://www.youtube.com/channel/UCdtR_BuPZB1LTcmR7Bj-moQ" target="_blank">
-                    <img src="img/youtube-logo.png" alt="Youtube"></a></li>
-            </ul>
-        </nav>
-        
-        <header id="header">
-            <h1>PORTFÓLIO</h1>
-        </header>
-
-        <div id="top-bar" class="top-bar">PORTFÓLIO</div>
-
-        <nav id="projects">
-            <h2>SITES</h2>
-            <ul>
-                <li></a>
-                    <div class="info">
-                        <a href="sites/minecrackters/index.html" class="link-to" target="_blank">Minecrackters</a>
-                        <h3>Uma fan page de minecraft feito só por hobby</h3>
-                        <p>Essa página foi feita em pouco tempo, e com pouco conhecimento. As características principais são a responsividade e a sandwich bar que aparece no modo responsivo.</p>
-                    </div></li>
-                <li></a>
-                    <div class="info">
-                        <a href="https://pink.filyp3r.vercel.app/" class="link-to" target="_blank">PinkJS</a>
-                        <h3>Uma biblioteca javascript que fiz só por diversão</h3>
-                        <p>Eu fiz essa página com a biblioteca PinkJS, a qual foi feita por mim. O recurso foi feito com o objetivo de "substituir" o html e dar um aspecto de php, pelo seu uso lado a lado com a programação, mas eu fiz apenas por diversão.</p>
-                    </div></li>
-            </ul>
-
-
-            <h2>JOGOS</h2>
-            <ul>
-                <li></a>
-                    <div class="info">
-                        <a href="https://filyp3.gamejolt.io/nicks-tower/" class="link-to" target="_blank">Nick's Tower</a>
-                        <h3>Um jogo feito para a <a href="https://jams.gamejolt.io/game_jaaj5" target="_blank">Game Jaaj 5</a></h3>
-                        <p>Esse jogo é um simples puzzle em primeira pessoa, foi feito em duas semanas junto com <a href="https://twitter.com/LendarioGuilmon" target="_blank">Abdias Leone</a> e <a href="https://twitter.com/gabrielmg004" target="_blank">Gabriel Mosquetto</a>. Não ganhamos, mas aparecemos nas menções honrosas no <a href="https://youtu.be/tLgoZtCuaJY" target="_blank">vídeo dos ganhadores</a>.</p>
-                    </div></li>
-                <li></a>
-                    <div class="info">
-                        <a href="https://filyp3.itch.io/jam-again" class="link-to" target="_blank">Again</a>
-                        <h3>Um jogo feito para a <a href="https://itch.io/jam/brackeys-4" target="_blank">Brackeys Jam 2020.2</a></h3>
-                        <p>Um jogo sobre repetições, a mesma fase se repete varias vezes, mas de maneiras diferentes. Feito em 7 dias junto ao meu amigo <a href="https://twitter.com/LendarioGuilmon" target="_blank">Abdias Leone</a>.</p>
-                    </div></li>
-            </ul>
-        </nav>
-        <footer><p>FEITO POR <a href="https://github.com/filyp3r" target="_blank">FILYP3</a> &lt;3</p></footer>
+    <div id="navigation-menu">
+        <header><p>Portfólio</p></header>
     </div>
 
-    <script src="scr/pink.js"></script>
-    <script>
-        window.addEventListener("scroll", function() {
-            if ( scrollY > document.getElementById('header').offsetTop + document.getElementById('header').offsetHeight/2 ) {
-                attrAdd(document.getElementById('top-bar'), "class", "show-top-bar");
-                attrAdd(document.getElementById('header'), "class", "top-bar-to-black");
-            } else {
-                attrRemove(document.getElementById('top-bar'), "class", "show-top-bar");
-                attrRemove(document.getElementById('header'), "class", "top-bar-to-black");
-            }
-        });
-    </script>
+    <main>
+        <div id="my-perfil">
+            <img src="" alt="Filyp3" id="my-perfil-image">
+            <div id="my-perfil-info">
+                <h1 id="my-perfil-name"></h1>
+                <p  id="my-perfil-bio"></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="scr.js"></script>
 </body>
 </html>
