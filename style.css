@@ -160,3 +160,36 @@ main div.category-title h1 {
     -webkit-text-fill-color: transparent;
     padding-top: 12px;
 }
+
+@media (max-width: 700px) {
+    #my-perfil {
+        flex-direction: column;
+        align-items: center;
+        margin: 64px 16px;
+    }
+    #my-perfil img {
+        margin: 16px 0;
+        width: 128px;
+        height: auto;
+    }
+    #my-perfil-name {
+        margin: 8px;
+        text-align: center;
+    }
+    #my-perfil-bio {
+        padding: 32px;
+    }
+
+    main div.category-title h1 {
+        display: block;
+        text-align: center;
+    }
+
+    .projects {
+        margin: 64px 16px;
+    }
+    .projects .item .item-name h2 {
+        display: block;
+        padding-bottom: 16px;
+    }
+}
