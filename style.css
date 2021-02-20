@@ -55,7 +55,7 @@ body {
 }
 
 #navigation-menu header p {
-    background: linear-gradient(-90deg,  #707, #007);
+    background-color: #007;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -102,14 +102,14 @@ main {
     filter: invert(1);
 }
 #my-perfil-name {
-    background: linear-gradient(90deg,  #ff4500, #ff0);
+    background-color: #ff4500;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 #my-perfil-bio {
     padding-top: 16px;
     padding-right: 28px;
-    background: linear-gradient(-90deg,  #ff4500, #ff0);
+    background-color:  #ff0;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -123,7 +123,7 @@ main div.category-title {
 }
 main div.category-title h1 {
     display: inline;
-    background: linear-gradient(-90deg,  #707, #007);
+    background-color: #007;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -147,7 +147,7 @@ main div.category-title h1 {
 }
 .projects .item .item-name h2 {
     display: inline;
-    background: linear-gradient(90deg,  #ff4500, #ff0);
+    background-color: #ff4500;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 20pt;
@@ -155,7 +155,7 @@ main div.category-title h1 {
 }
 .projects .item p {
     display: block;
-    background: linear-gradient(-90deg,  #ff4500, #ff0);
+    background-color: #ff0;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     padding-top: 12px;
