@@ -36,9 +36,11 @@ body {
 
 .navigation-menu-absolute header {
     top: 0;
+    font-size: 24pt;
 }
 .navigation-menu-fixed header {
     top: 50%;
+    font-size: 18pt
     /* margin-left: 32px; */
 }
 #navigation-menu header {
@@ -49,9 +51,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24pt;
     font-weight: bold;
-    transition: top .15s;
+    transition: all .15s;
 }
 
 #navigation-menu header p {
