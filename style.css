@@ -55,9 +55,7 @@ body {
 }
 
 #navigation-menu header p {
-    background-color: #007;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #007;
 }
 
 main {
@@ -102,16 +100,12 @@ main {
     filter: invert(1);
 }
 #my-perfil-name {
-    background-color: #ff4500;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ff4500;
 }
 #my-perfil-bio {
     padding-top: 16px;
     padding-right: 28px;
-    background-color:  #ff0;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color:  #ff0;
 }
 
 main div.category-title {
@@ -123,9 +117,7 @@ main div.category-title {
 }
 main div.category-title h1 {
     display: inline;
-    background-color: #007;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #007;
 }
 
 .projects {
@@ -147,18 +139,22 @@ main div.category-title h1 {
 }
 .projects .item .item-name h2 {
     display: inline;
-    background-color: #ff4500;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ff4500;
     font-size: 20pt;
     transition: filter .25s;
 }
 .projects .item p {
     display: block;
-    background-color: #ff0;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ff0;
     padding-top: 12px;
+}
+.projects .item p a:hover {
+    color: #ff0;
+    text-decoration: underline;
+}
+.projects .item p a {
+    color: #770;
+    text-decoration: none;
 }
 
 @media (max-width: 700px) {
