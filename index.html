@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div id="navigation-menu">
+    <div id="navigation-menu" class="navigation-menu-absolute">
         <header><p>Portfólio</p></header>
     </div>
 
@@ -17,12 +17,75 @@
         <div id="my-perfil">
             <img src="" alt="Filyp3" id="my-perfil-image">
             <div id="my-perfil-info">
-                <h1 id="my-perfil-name"></h1>
-                <p  id="my-perfil-bio"></p>
+                <a href="https://github.com/filyp3r" target="_blank"><h1 id="my-perfil-name"></h1></a>
+                <p id="my-perfil-bio"></p>
             </div>
+        </div>
+
+        <div id="my-projects">
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
+            <h1>TEXTO DE TESTE</h1>
         </div>
     </main>
 
+    <script src="modules/pinkscript.js"></script>
     <script src="scr.js"></script>
+    <script>
+        var nav_menu = document.getElementById('navigation-menu')
+        window.addEventListener('scroll', function() {
+            if ( scrollY > 128 / 2 ) {
+                attrAdd(nav_menu, 'class', 'navigation-menu-fixed');
+                attrRemove(nav_menu, 'class', 'navigation-menu-absolute');
+            } else {
+                attrRemove(nav_menu, 'class', 'navigation-menu-fixed');
+                attrAdd(nav_menu, 'class', 'navigation-menu-absolute');
+            }
+        });
+    </script>
 </body>
 </html>

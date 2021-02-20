@@ -3,7 +3,8 @@
     padding: 0;
     font-family: sans-serif;
 
-    --nav-menu-height: 64px;
+    --nav-menu-height: 128px;
+    --nav-menu-height-fixed: 64px;
 }
 
 body {
@@ -12,28 +13,47 @@ body {
     min-height: 100vh;
 }
 
+:focus {
+    outline: none;
+}
+
+.navigation-menu-absolute {
+    position: absolute;
+}
+.navigation-menu-fixed {
+    position: fixed;
+    transform: translateY(-50%);
+}
 #navigation-menu {
     z-index: 1;
-    position: absolute;
+    height: var(--nav-menu-height);
     top: 0;
     left: 0;
     right: 0;
-    height: var(--nav-menu-height);
     background-image: linear-gradient(90deg, #ff4500, #ff0);
     box-shadow: 0px 4px 32px  #007;
 }
+
+.navigation-menu-absolute header {
+    top: 0;
+}
+.navigation-menu-fixed header {
+    top: 50%;
+    /* margin-left: 32px; */
+}
 #navigation-menu header {
     position: absolute;
-    top: 0;
-    left: 24px;
+    bottom: 0;
+    left: 0;
     right: 0;
-    height: 100%;
     display: flex;
     align-items: center;
-    text-transform: uppercase;
+    justify-content: center;
+    font-size: 24pt;
     font-weight: bold;
-    font-size: 16pt;
+    transition: top .15s;
 }
+
 #navigation-menu header p {
     background: linear-gradient(-90deg,  #707, #007);
     background-clip: text;
@@ -45,7 +65,7 @@ main {
     top: var(--nav-menu-height);
     left: 0;
     right: 0;
-    bottom: 0;
+    min-height: calc(100% - var(--nav-menu-height));
     background-image: linear-gradient(90deg, #707, #007);
 }
 
@@ -55,15 +75,17 @@ main {
     border-radius: 16px;
     display: flex;
     flex-direction: row;
-    
+
     box-shadow: 0px 0px 8px  #007;
 }
 #my-perfil img {
     display: block;
     height: 200px;
     width: auto;
-    padding: 28px;
+    padding: 2px;
+    margin: 28px;
     border-radius: 50%;
+    background: linear-gradient(-45deg,  #f00, #0f0, #00f);
 }
 #my-perfil-info {
     display: block;
@@ -71,13 +93,21 @@ main {
     flex-direction: column;
     justify-content: center;
 }
+
+#my-perfil-info a {
+    text-decoration: none;
+    transition: filter .5s;
+}
+#my-perfil-info a:hover {
+    filter: invert(1);
+}
 #my-perfil-name {
-    padding: 0 0 16px 0;
     background: linear-gradient(90deg,  #ff4500, #ff0);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 #my-perfil-bio {
+    padding-top: 16px;
     padding-right: 28px;
     background: linear-gradient(-90deg,  #ff4500, #ff0);
     background-clip: text;
