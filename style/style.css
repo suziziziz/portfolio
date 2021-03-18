@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #450045;
+}
+
+body {
+    background-color: #fff;
+}
+
+.navbar-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background-color: #450045;
+    z-index: 1;
+}
+.navbar-top-header {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 24px;
+    height: 48px;
+    font-size: 16pt;
+    color: #f07;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+}
+.navbar-top-header:hover {
+    background-color: rgba(255, 255, 255, .125);
+    cursor: pointer;
+}
+.navbar-top-header:focus {
+    outline: none;
+}
+
+main {
+    margin-top: 48px;
+    padding: 0 32px;
+}
+main article {
+    padding-top: 16px;
+}
+main article h1 {
+    font-size: 24pt;
+    margin-bottom: 8px;
+    text-decoration: underline;
+    color: #f07;
+}
+main article h2 {
+    font-size: 16pt;
+    margin: 8px 0;
+}
+main article#about-me p {
+    margin: 4px 16px;
+}
+
+.project {
+    width: 100%;
+    min-height: 160px;
+    border: 1px solid #f7f;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    padding: 8px 0px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    transition: background-color .2s;
+}
+.project:hover {
+    background-color: #fdf;
+}
+.project-info {
+    display: block;
+    width: 100%;
+    padding: 16px;
+}
+.project-name {
+    font-size: 20pt;
+    text-decoration: none;
+    display: block;
+    padding-bottom: 8px;
+    color: #f07;
+}
+.project-name:hover {
+    text-decoration: underline;
+}
+.project p {
+    margin: 4px 0;
+}

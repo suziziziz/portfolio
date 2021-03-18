@@ -4,20 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Início</title>
-
-    <!-- Import -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="/style/style.css">
 </head>
 
 <body>
-    <script src="/script/navbar.js"></script> <!-- ISSO FICA NO TOPO DE TUDO -->
-    <div class="container">
-        <h1>Portfólio</h1>
-        <h3>Tudo que eu sei</h3>
-        <p>Navegue pela barra de navegação acima</p>
+    <div class="navbar-top">
+        <a href="/" class="navbar-top-header">Portfólio</a>
     </div>
+
+    <main>
+        <article id="about-me">
+            <h1>Sobre Mim</h1>
+            <h2>Quem sou eu</h2>
+            <p>Meu nome é Filype Rewel Rodrigues Andrade, tenho 18 anos e sou desenvolvedor de jogos e webdesigner.</p>
+            <p>Comecei com desenvolvimento de jogos no final de 2016, sendo os jogos em 2D. No meio de 2020 me dediquei a aprender desenvolvimento de jogos 3D, e desde o começo de 2021 passo maior parte do meu tempo estudando desenvolvimento web.</p>
+            <p>Mesmo que eu tenha começado muito recentemente com desenvolvimento web, eu evoluí rápido, pois tenho facilidade em aprender qualquer coisa relacionada a essa área.</p>
+
+            <h2>Quais os meus conhecimentos</h2>
+            <p>Tenho conhecimento em HTML, CSS, o básico de Bootstrap, Javascript, Ajax e estou estudando VueJS e PHP.</p>
+            <p>Em relação a desenvolvimento de jogos, uso as engines GameMaker:Studio 2, para desenvolvimento de jogos 2D, e a Godot Engine, para 3D.</p>
+
+            <h2>Qual meu objetivo</h2>
+            <p>Apesar de gostar de estudar sobre novas tecnologias, eu me decidi fixar no desenvolvimento web. Tenho objetivo de trabalhar com essa área, e mesmo que haja falta de oportunidades vou continuar estudando sobre novas tecnologias.</p>
+        </article>
+
+        <article id="my-games">
+            <h1>Meus Projetos</h1>
+            <h2>WEB</h2>
+            <div class="project">
+                <div class="project-info">
+                    <a href="https://minecrackters.vercel.app/" target="blank" class="project-name">Minecrackters</a>
+                    <p>Essa é uma fan-page de minecraft, feita por hobbie e para treinar meu HTML e CSS.</p>
+                    <p>Ela é uma página "responsiva", entre aspas porquê o modo como eu fiz a responsividade dela na época não foi do jeito certo.</p>
+                    <p>É uma página morta, não tinha objetivo de concluir ela mesmo, foi só pra ter algum conteúdo no meu Portfólio.</p>
+                </div>
+            </div>
+
+            <h2>JOGOS</h2>
+            <div class="project">
+                <div class="project-info">
+                    <a href="https://github.com/filyp3r/godot-nicks-tower" target="blank" class="project-name">Nick's Tower</a>
+                    <p>Nick's Tower é um jogo sobre construir uma torre, foi feito na Godot Engine para a GameJaaj5.</p>
+                    <p>Esse é um Puzzle em Primeira Pessoa, foi feito em 14 dias junto com dois amigos meus.</p>
+                    <p>Não ganhamos, mas entramos entre as menções honrosas.</p>
+                    <p>Ele vai ser continuado.</p>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-info">
+                    <a href="https://github.com/filyp3r/gamemaker-studio-again" target="blank" class="project-name">Again</a>
+                    <p>Again é um jogo sobre repetições, foi feito na Engine GameMaker:Studio para a Brackeys Jam 2020.2.</p>
+                    <p>É um jogo estilo Puzzle de Plataforma 2D, baseado em That Level Again. Foi feito junto com um amigo meu.</p>
+                    <p>Ele está descontinuado.</p>
+                </div>
+            </div>
+        </article>
+    </main>
 </body>
 </html>
