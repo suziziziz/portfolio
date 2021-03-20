@@ -3,6 +3,12 @@
     padding: 0;
     font-family: sans-serif;
     color: #450045;
+
+    --navbar-height: 48px;
+}
+
+:focus {
+    outline: none;
 }
 
 body {
@@ -14,7 +20,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 48px;
+    height: var(--navbar-height);
     background-color: #450045;
     z-index: 1;
 }
@@ -22,7 +28,7 @@ body {
     display: inline-flex;
     align-items: center;
     padding: 0 24px;
-    height: 48px;
+    height: var(--navbar-height);
     font-size: 16pt;
     color: #f07;
     text-decoration: none;
@@ -33,12 +39,46 @@ body {
     background-color: rgba(255, 255, 255, .125);
     cursor: pointer;
 }
-.navbar-top-header:focus {
-    outline: none;
+
+.navbar-top .social-links {
+    display: flex;
+    flex-direction: row-reverse;
+    top: 0;
+    float: right;
+    height: 100%;
+    list-style: none;
+}
+.navbar-top .social-links li {
+    height: var(--navbar-height);
+    width: var(--navbar-height);
+}
+.navbar-top .social-links li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--navbar-height);
+    width: var(--navbar-height);
+    background-color: transparent;
+    transition: background-color .3s;
+}
+.navbar-top .social-links li a:hover {
+    background-color: #fff;
+    transition: background-color .1s;
+}
+.navbar-top .social-links img {
+    display: block;
+    height: 80%;
+    width: auto;
+    filter: invert(1);
+    transition: filter .15s;
+}
+.navbar-top .social-links li a:hover img {
+    filter: invert(0);
 }
 
+
 main {
-    margin-top: 48px;
+    margin-top: var(--navbar-height);
     padding: 0 32px;
 }
 main article {
@@ -69,10 +109,11 @@ main article#about-me p {
     display: flex;
     align-items: center;
     background-color: #fff;
-    transition: background-color .2s;
+    transition: background-color .3s;
 }
 .project:hover {
     background-color: #fdf;
+    border-color:  #707;
 }
 .project-info {
     display: block;
@@ -91,4 +132,40 @@ main article#about-me p {
 }
 .project p {
     margin: 4px 0;
+}
+
+
+footer {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #450045;
+    height: 48px;
+}
+footer p {
+    color: #f7f;
+    text-transform: uppercase;
+}
+footer a {
+    color: #f07;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 600px) {
+    main {
+        margin-right: 48px;
+    }
+    .navbar-top .social-links {
+        position: fixed;
+        right: 0;
+        top: var(--navbar-height);
+        flex-direction: column;
+        background-color: #450045;
+        height: calc(100vh - var(--navbar-height));
+    }
 }
