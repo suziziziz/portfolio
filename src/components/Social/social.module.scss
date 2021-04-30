@@ -1,0 +1,32 @@
+.socialLink {
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(#f07, #70f);
+
+  box-sizing: border-box;
+  border-radius: 50%;
+  padding: 6px;
+  margin: 8px 2px;
+
+  overflow: hidden;
+  transition: padding .2s;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    transition: filter .15s;
+  }
+
+  &:hover {
+    padding: 2px;
+    transition: padding 0s;
+
+    img {
+      filter: invert(1);
+    }
+  }
+}

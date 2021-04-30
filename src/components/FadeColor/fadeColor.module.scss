@@ -1,0 +1,13 @@
+.fadeToBlack, .fadeToTransparent {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  pointer-events: none;
+}
+
+.fadeToBlack {
+  background: linear-gradient(#0000, #000);
+}
+.fadeToTransparent {
+  background: linear-gradient(#000, #0000);
+}

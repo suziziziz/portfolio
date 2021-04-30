@@ -1,0 +1,19 @@
+.interrogation {
+  display: block;
+  font-size: 16rem;
+  font-weight: bolder;
+  color: #70f;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  animation: floating 5s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%   { transform: translate(-50%, -47.5%); }
+  50%  { transform: translate(-50%, -52.5%); }
+  100% { transform: translate(-50%, -47.5%); }
+}

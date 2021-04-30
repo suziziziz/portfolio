@@ -1,0 +1,36 @@
+.luna {
+  display: block;
+  width: 256px;
+  height: 256px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-20%, -20%);
+
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: linear-gradient(-45deg, #f7f, #000);
+  transition: all .2s;
+
+  padding: 32px;
+  box-shadow: 0 0 32px #000;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: .2;
+    transition: all .2s;
+  }
+
+  &:hover {
+    width: 280px;
+    height: 280px;
+    box-shadow: 0 0 32px #848;
+
+    img {
+      opacity: .6;
+    }
+  }
+}

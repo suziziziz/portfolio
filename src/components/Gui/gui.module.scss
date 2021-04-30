@@ -1,0 +1,51 @@
+.gui {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  z-index: 5;
+  pointer-events: none;
+
+  .backToTop {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    pointer-events: auto;
+    margin: 32px;
+
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(#f07, #70f);
+    border-radius: 50%;
+    
+    font-size: 2rem;
+    text-decoration: none;
+    transform: rotate(90deg);
+
+    box-sizing: border-box;
+    padding: 2px;
+
+    transition: all .3s;
+    
+    span {
+      color: #fff;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      border-radius: 50%;
+      transition: all .2s;
+    }
+    &:hover span {
+      color: #000;
+      background: transparent;
+    }
+
+    &.hide {
+      opacity: 0 !important;
+      pointer-events: none !important;
+      transform: rotate(270deg);
+    }
+  }
+}
