@@ -27,7 +27,7 @@ export default function Piece( props: PieceProps ) {
   const pieceNext = `#${myIdName}-${Number(props.id) + 1}`
 
   const divRef = useRef<HTMLDivElement>(null)
-  const [show, setShow] = useState(true)
+  const [show, setShow] = useState(false)
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
