@@ -29,15 +29,19 @@ export default function Piece( props: PieceProps ) {
   const divRef = useRef<HTMLDivElement>(null)
   const [show, setShow] = useState(false)
 
+  function handleScroll() {
+    if (window.scrollY >= divRef.current.offsetTop - 16 && window.scrollY <= divRef.current.offsetTop + 16) {
+      setShow(true)
+    } else {
+      setShow(false)
+    }
+  }
+
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY >= divRef.current.offsetTop - 16 && window.scrollY <= divRef.current.offsetTop + 16) {
-        setShow(true)
-      } else {
-        setShow(false)
-      }
-    })
+    window.addEventListener('load', handleScroll)
+    window.addEventListener('scroll', handleScroll)
   }, [])
+
 
   return (
     <div id={pieceCurrent} className={styles.piece} style={props.style} ref={divRef}>
