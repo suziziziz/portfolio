@@ -49,6 +49,7 @@ export default function Home() {
         <Project href='https://github.com/suziziziz/godot-nicks-tower' src='/nicks-tower.png' alt="Nick's Tower" />
         <Project href='https://github.com/suziziziz/gamemaker-studio-again' src='/again.png' alt="Again" />
         <Project href='https://github.com/suziziziz/gamemaker-studio-n14' src='/n14.png' alt="N14" />
+        <Project href='https://github.com/suziziziz/ce64' src='/ce64.png' alt="CE64" />
       </Piece>
     </div>
   )
