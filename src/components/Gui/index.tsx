@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, MouseEvent } from 'react'
 import styles from './gui.module.scss'
 
 export default function Gui( ) {
@@ -25,9 +25,9 @@ export default function Gui( ) {
     document.documentElement.style.setProperty('--vh', `${divRef.current.offsetHeight}px`)
   }
 
-  function handlerClick( e: any ) {
+  function handlerClick( event: MouseEvent<HTMLAnchorElement> ) {
     if ( !canBack ) {
-      e.preventDefault()
+      event.preventDefault()
     } else {
       setCanBack(false)
     }
