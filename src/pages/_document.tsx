@@ -6,7 +6,8 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <link rel="shortcut icon" href="/favicon.png" type="image/png" />
-		  <title>Portfólio</title>
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+          <title>Portfólio</title>
         </Head>
 
         <body>

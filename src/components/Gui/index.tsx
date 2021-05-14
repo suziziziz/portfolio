@@ -2,20 +2,10 @@ import { useEffect, useRef, useState, MouseEvent } from 'react'
 import styles from './gui.module.scss'
 
 export default function Gui( ) {
-  const [show, setShow] = useState(false)
-  const [canBack, setCanBack] = useState(true)
+  const [hover, setHover] = useState(false)
   const divRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      if ( window.scrollY <= 64 ) {
-        setShow(false)
-        setCanBack(true)
-      } else {
-        setShow(true)
-      }
-    })
-
     window.addEventListener('resize', handlerResize)
     window.addEventListener('load', handlerResize)
   }, [])
@@ -25,21 +15,23 @@ export default function Gui( ) {
     document.documentElement.style.setProperty('--vh', `${divRef.current.offsetHeight}px`)
   }
 
-  function handlerClick( event: MouseEvent<HTMLAnchorElement> ) {
-    if ( !canBack ) {
-      event.preventDefault()
-    } else {
-      setCanBack(false)
-    }
+  function handlerHover( state: boolean ) {
+    setHover(state)
   }
 
   return (
     <div className={styles.gui} ref={divRef}>
-      <a
-        href="#"
-        className={`${styles.backToTop}${!show ? ' ' + styles.hide : ''}`}
-        onClick={handlerClick}
-      ><span>&lt;</span></a>
+      <div className={styles.navigator}
+        onMouseOver={() => handlerHover(true)}
+        onMouseOut={() =>handlerHover(false)}
+      >
+        <a href="#piece-6"><div><i className="material-icons">videogame_asset</i></div></a>
+        <a href="#piece-4"><div><i className="material-icons">public</i></div></a>
+        <a href="#piece-1"><div><i className="material-icons">face</i></div></a>
+        <a href="#piece-0"><div><i className="material-icons">
+          { hover ? "home" : "arrow_drop_up" }
+        </i></div></a>
+      </div>
     </div>
   )
 }
