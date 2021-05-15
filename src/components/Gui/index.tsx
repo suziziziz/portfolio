@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState, MouseEvent } from 'react'
+import { useEffect, useRef } from 'react'
 import styles from './gui.module.scss'
 
 export default function Gui( ) {
-  const [hover, setHover] = useState(false)
   const divRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -15,22 +14,17 @@ export default function Gui( ) {
     document.documentElement.style.setProperty('--vh', `${divRef.current.offsetHeight}px`)
   }
 
-  function handlerHover( state: boolean ) {
-    setHover(state)
-  }
-
   return (
     <div className={styles.gui} ref={divRef}>
-      <div className={styles.navigator}
-        onMouseOver={() => handlerHover(true)}
-        onMouseOut={() =>handlerHover(false)}
-      >
-        <a href="#piece-6"><div><i className="material-icons">videogame_asset</i></div></a>
-        <a href="#piece-4"><div><i className="material-icons">public</i></div></a>
-        <a href="#piece-1"><div><i className="material-icons">face</i></div></a>
-        <a href="#piece-0"><div><i className="material-icons">
-          { hover ? "home" : "arrow_drop_up" }
-        </i></div></a>
+      <div className={styles.navigator}>
+        <div className={styles.dropUp}><i className="material-icons">arrow_drop_up</i>
+          <div className={styles.dropUpContent} tabIndex={0}>
+            <a href="#piece-6"><i className="material-icons">videogame_asset</i><span>PROJETOS GAMEDEV</span></a>
+            <a href="#piece-4"><i className="material-icons">public</i><span>PROJETOS WEBDEV</span></a>
+            <a href="#piece-1"><i className="material-icons">face</i><span>SOBRE MIM</span></a>
+            <a href="#piece-0"><i className="material-icons">home</i><span>INÍCIO</span></a>
+          </div>
+        </div>
       </div>
     </div>
   )

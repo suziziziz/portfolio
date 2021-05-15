@@ -7,91 +7,91 @@
   pointer-events: none;
 
   .navigator {
-    display: inline-block;
     pointer-events: auto;
     position: absolute;
-    right: 1rem;
-    bottom: 1rem;
+    bottom: 2rem;
+    right: 2rem;
 
-    &:hover {
-      a {
-        position: relative;
-        display: block;
-        
-        &:last-child, &:last-child div {
-          border-top-left-radius: 0;
-          border-top-right-radius: 0;
-        }
-        &:last-child div {
-          background: transparent;
-        }
-      }
-    }
-
-    a {
-      display: none;
+    .dropUp {
+      cursor: default;
       width: 2.5rem;
-      height: 2.5rem;
-      background: #f07;
-      box-sizing: border-box;
-      text-decoration: none;
-      font-size: 0;
+      // height: 2.5rem;
 
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      
-      padding: 0px 2px;
-      
-      div {
-        width: 100%;
-        height: 100%;
-        background: #000;
-        font-size: 1rem;
+      background: linear-gradient(#f07, #70f);
+      border-radius: 2.5rem;
 
-        transition: background .2s;
+      position: relative;
+      overflow: hidden;
 
+
+      i {
         display: flex;
         align-items: center;
         justify-content: center;
-
-
-        i {
-          font-size: 1.25rem;
-          transition: color .2s;
-        }
-      }
-
-      &:first-child {
-        border-top-left-radius: 2.5rem;
-        border-top-right-radius: 2.5rem;
-        background: linear-gradient(#70f, #f07);
-        padding-top: 2px;
-
-        div {
-          border-top-left-radius: 2.5rem;
-          border-top-right-radius: 2.5rem;
-        }
-      }
-      &:last-child {
-        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
         border-radius: 2.5rem;
-        background: linear-gradient(#f07, #70f);
-        padding: 2px;
-
-        div {
-          border-radius: 2.5rem;
-        }
+        color: #000;
+        transition: color .2s;
       }
-      &:hover {
-        div {
-          background: transparent;
-          transition: background 0s;
+      .dropUpContent {
+        display: flex;
+        flex-direction: column-reverse;
+        position: absolute;
+        bottom: 100%;
+
+        a {
+          position: relative;
+          display: block;
+          width: 2.5rem;
+          height: 2.5rem;
+          background: #f07;
+          text-decoration: none;
+          transition: background .2s;
 
           i {
             color: #000;
-            transition: color 0s;
+            transition: color .2s;
           }
+          span {
+            pointer-events: none;
+            position: absolute;
+            right: 100%;
+            bottom: 50%;
+            padding-right: 8px;
+            transform: translateY(50%);
+            white-space: nowrap;
+            font-size: 1rem;
+            color: #777;
+            transition: color .2s;
+          }
+
+          &:hover {
+            background: #000;
+            
+            i {
+              color: #fff;
+            }
+
+            span {
+              color: #fff;
+              transition: color 0s;
+            }
+          }
+          &:last-child {
+            border-top-left-radius: 2.5rem;
+            border-top-right-radius: 2.5rem;
+          }
+        }
+      }
+
+      &:hover {
+        overflow: initial;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+
+        i {
+          color: #fff;
         }
       }
     }
