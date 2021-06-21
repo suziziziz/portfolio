@@ -28,7 +28,7 @@ export default function Home() {
 
       <Piece id={++pieceIndex} style={{background: '#000'}}>
         <h1>QUAIS OS MEUS CONHECIMENTOS?</h1>
-        <p>Tenho conhecimento em HTML, CSS, JavaScript e ReactJS.</p>
+        <p>Tenho conhecimento em HTML, CSS, JavaScript e ReactJS + Next.</p>
         <p>Na área de desenvolvimento de jogos, eu tenho conhecimento nas engines Godot e GameMaker:Studio.</p>
       </Piece>
 
@@ -37,7 +37,8 @@ export default function Home() {
       </Piece>
       
       <Piece id={++pieceIndex}>
-        <Project href='https://github.com/suziziziz/miniproject-calculator' src='/calculator.jpg' alt='Calculadora' />
+        <Project href='https://lulacoin.org' src='/lulacoin.jpg' alt='Lula Coin' />
+        <Project href='https://www.bellamodels.com.br/promolandingpage' src='/bellamodels.jpg' alt='Bella Models + Projects (Promotion Landing Page)' />
       </Piece>
 
       <Piece id={++pieceIndex} fadeTo='black'>
