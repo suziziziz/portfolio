@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import styles from './gui.module.scss'
 
 export default function Gui( ) {
@@ -12,6 +12,7 @@ export default function Gui( ) {
   function handlerResize( ) {
     document.documentElement.style.setProperty('--vw', `${divRef.current.offsetWidth}px`)
     document.documentElement.style.setProperty('--vh', `${divRef.current.offsetHeight}px`)
+    window.open(window.location.hash, '_self')
   }
 
   return (
