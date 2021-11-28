@@ -33,6 +33,7 @@
         border-radius: 2.5rem;
         color: #000;
         transition: color .2s;
+        pointer-events: none;
       }
       .dropUpContent {
         display: flex;
@@ -52,6 +53,7 @@
           i {
             color: #000;
             transition: color .2s;
+            pointer-events: none;
           }
           span {
             pointer-events: none;
