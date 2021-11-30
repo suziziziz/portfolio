@@ -10,7 +10,7 @@ export default function Home() {
       <Piece id={++pieceIndex} luna pyramid notPrevious fadeTo='black' >
         <h1>PORTFÓLIO</h1>
         <p>de Filype Rodrigues</p>
-        <Social href='https://www.linkedin.com/in/suziziziz/' src='/logo-linkedin.svg' alt='Linkedin' />
+        <Social href='https://www.linkedin.com/in/suziziziz' src='/logo-linkedin.svg' alt='Linkedin' />
         <Social href='https://suziziziz.itch.io' src='/logo-itch.svg' alt='Itch' />
         <Social href='https://gamejolt.com/@suziziziz' src='/logo-gamejolt.png' alt='GameJolt' />
       </Piece>
@@ -21,14 +21,14 @@ export default function Home() {
 
       <Piece id={++pieceIndex} style={{background: '#000'}}>
         <h1>QUEM SOU EU?</h1>
-        <p>Meu nome é Filype Rewel Rodrigues Andrade, sou Web/Game Developer.</p>
-        <p>Em relação a desenvolvimento web, eu sou iniciante nisso, comecei a estudar sobre isso no início de 2021.</p>
+        <p>Meu nome é Filype, sou Web/Game Developer.</p>
+        <p>Em relação a desenvolvimento web, eu sou iniciante nisso, comecei a estudar sobre isso no início de 2021, mas adquiri conhecimento suficiente para desenvolver qualquer coisa.</p>
         <p>Já em relação a desenvolvimento de jogos, eu programo há quase 4 anos.</p>
       </Piece>
 
       <Piece id={++pieceIndex} style={{background: '#000'}}>
         <h1>QUAIS OS MEUS CONHECIMENTOS?</h1>
-        <p>Tenho conhecimento em HTML, CSS, JavaScript e ReactJS + Next.</p>
+        <p>Tenho conhecimento em HTML, CSS, JavaScript, React, Next, ReactNative (Desenvolvimento Mobile) e Electron (Desenvovimento Desktop).</p>
         <p>Na área de desenvolvimento de jogos, eu tenho conhecimento nas engines Godot e GameMaker:Studio.</p>
       </Piece>
 
